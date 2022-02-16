@@ -5,27 +5,29 @@ import java.util.Arrays;
 public class Farm {
     private String address;
     private String owner;
-    private Sheep[] sheep;
-    private Horse[] horses;
-    private Cow[] cows;
+    private  DosmeticAnimal[] sheep;
+    private DosmeticAnimal[] cows;
+    private DosmeticAnimal[] horse;
 
-    @Override
-    public String toString() {
-        return "Farm information: " +'\n' +
-                "address: " + address + '\n' +
-                "ownerName: " + owner + '\n' +
-                "sheep: " + sheep.length +'\n' +
-                "horses: " + horses.length +'\n' +
-                "cows: " + cows.length+'\n';
-    }
 
-    public Farm(String address, String owner, Sheep[] sheep, Horse[] horses, Cow[] cows) {
+    public Farm(String address, String owner, Sheep[] sheep, Cow[] cows, Horse[] horse) {
         this.address = address;
         this.owner = owner;
         this.sheep = sheep;
-        this.horses = horses;
         this.cows = cows;
+        this.horse = horse;
+
+
     }
 
-
+    @Override
+    public String toString() {
+        return "Farm{" +
+                "\naddress='" + address  +
+                ", \nowner='" + owner  +
+                ", \nsheep=" +sheep.length+
+                ", \ncows=" + cows.length +
+                ", \nhorse=" + horse.length +
+                '}';
+    }
 }
